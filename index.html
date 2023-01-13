@@ -1,828 +1,3205 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-   <head>
-      <meta charset="UTF-8">
-      <title align="center">Audio samples for  "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</title>
-      <style type="text/css">
-        body, input, select, td, li, div, textarea, p {
-        	font-size: 11px;
-        	line-height: 16px;
-        	font-family: verdana, arial, sans-serif;
-        }
 
-        body {
-        	margin:5px;
-        	background-color:white;
-        }
+<head>
+  <meta charset="UTF-8">
+  <title align="center">Audio samples for "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</title>
+  <style type="text/css">
+    body,
+    input,
+    select,
+    td,
+    li,
+    div,
+    textarea,
+    p {
+      font-size: 11px;
+      line-height: 16px;
+      font-family: verdana, arial, sans-serif;
+    }
 
-        h1 {
-        	font-size:16px;
-        	font-weight:bold;
-        }
+    body {
+      margin: 5px;
+      background-color: white;
+    }
 
-        h2 {
-        	font-size:14px;
-        	font-weight:bold;
-        }
-      </style>
-   </head>
-   <body>
-      <article>
-         <header>
-            <h1>Audio samples for  "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</h1>
-         </header>
-      </article>
-     
-<!--       <div>
+    h1 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    <header>
+      <h1>Audio samples for "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</h1>
+    </header>
+  </article>
+
+  <!--       <div>
       PAPER accepted by INTERSPEECH 2020: <a href = https://arxiv.org/abs/2002.06758 >pdf</a>
       </div> -->
-      
-<!--       <div>
+
+  <!--       <div>
       Website license info sheet <a href = https://yolanda-gao.github.io/Interactive-Style-TTS/Interactive_TTS_license.pdf >pdf</a>
       </div> -->
 
 
-      <div>
-        <h2>Abstract</h2>
-        <p>A singing voice conversion model converts a song in the voice of an arbitrary source singer to the voice of a target singer. Recently,
-            methods that leverage self-supervised audio representations suchas HuBERT and Wav2Vec 2.0 have helped further the state-of-the-art. Though 
-            these methods produce more natural and melodic singing outputs, they often rely on confusion and disentanglement losses to render the 
-            self-supervised representations speaker and pitch-invariant. In this paper, we circumvent disentanglement training and propose a new model 
-            that leverages ASR fine-tuned self-supervised representations as inputs to a HiFi-GAN neural vocoder for singing voice conversion. We 
-            experiment with different f0 encoding schemes and show that an f0 harmonic generation module that uses a parallel bank of transposed 
-            convolutions (PBTC) alongside ASR fine-tuned Wav2Vec 2.0 features results in the best singing voice conversion quality. Additionally, 
-            the model is capable of making a spoken voice sing. We also show that a simple f0 shifting scheme during inference helps retain singer 
-            identity and bolsters the performance of our singing voice conversion model. Our results are backed up by extensive MOS studies that 
-            compare different ablations and baselines.</p>
-      </div>
+  <div>
+    <h2>Abstract</h2>
+    <p>A singing voice conversion model converts a song in the voice of an arbitrary source singer to the voice of a
+      target singer. Recently, methods that leverage self-supervised audio representations suchas HuBERT and Wav2Vec 2.0 
+      have helped further the state-of-the-art. Though these methods produce more natural and melodic singing outputs, 
+      they often rely on confusion and disentanglement losses to render the self-supervised representations speaker and 
+      pitch-invariant. In this paper, we circumvent disentanglement training and propose a new model that leverages ASR 
+      fine-tuned self-supervised representations as inputs to a HiFi-GAN neural vocoder for singing voice conversion. We
+      experiment with different f0 encoding schemes and show that an f0 harmonic generation module that uses a parallel
+      bank of transposed convolutions (PBTC) alongside ASR fine-tuned Wav2Vec 2.0 features results in the best singing voice 
+      conversion quality. Additionally, the model is capable of making a spoken voice sing. We also show that a simple f0 
+      shifting scheme during inference helps retain singer identity and bolsters the performance of our singing voice conversion 
+      model. Our results are backed up by extensive MOS studies that compare different ablations and baselines.</p>
+  </div>
 
-      <h2> Contents </h2>
-      <div id="toc_container">
-         <ul>
-            <b> <a href="#MOS1">A: MOS Study 1 samples</a> </b><br/>
-            <b> <a href="#MOS2">B: MOS Study 2 Samples </a> </b><br/>
-            <b> <a href="#MOS3">C: MOS Study 3 Samples</a> </b><br/>
-            <b> <a href="#MOS4">D: MOS Study 4 Samples</a> </b><br/>
-         </ul>
-      </div>
+  <h2> Contents </h2>
+  <div id="toc_container">
+    <ul>
+      <b> <a href="#MOS1">A: MOS Study 1 samples</a> </b><br />
+      <b> <a href="#MOS2">B: MOS Study 2 Samples </a> </b><br />
+      <b> <a href="#MOS3">C: MOS Study 3 Samples</a> </b><br />
+      <b> <a href="#MOS4">D: MOS Study 4 Samples</a> </b><br />
+    </ul>
+  </div>
 
-<!---    <h1>Samples for six styles</h1> -->
-    <h1> Section A </h1>
-    <p><a id='MOS1'></a></p>
-    <p> We present samples that we used in MOS Study 1.
-    </p>
+  <div>
+  </div>
+  <!---    <h1>Samples for six styles</h1> -->
+  <h1> Section A </h1>
+  <p><a id='MOS1'></a></p>
+  <p> 
+        Samples from MOS Study 1.  Raters were asked the judge the audio quality
+        across different models.  Each model uses HuBERT as the self-supervised
+        feature, but varies the training procedure (e.g., using only singing data
+        vs. singing + spoken speech data) or varies the f0 feature encoder (e.g.,
+        PBTC vs. Q-LUT).
+    
+  </p>
 
-    <div>
-      <h2> Styles </h2>
-      <table border = "1" class="inlineTable">
-        <col width="300">
-        <col width="300">
-
-        <tr>
-           <th></th>
-           <th>A</th>
-           <th>B</th>
-        </tr>
-        <tr>
-            <th>Soft</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Soft/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Soft/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-            <th>Fast</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Fast/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Fast/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-            <th>Neutral</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Neutral/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Neutral/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Happy</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Happy/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Happy/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Sad</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Sad/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Sad/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Angry</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Angry/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Style/Angry/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-    </table>
-    </div>
-
-    <div>
-    </div>
-
-<!---    <h1>Weights effects on style rendering</h1> -->
-    <h1> Section B </h1>
-    <p><a id='MOS2'></a></p>
-    <p> We present samples that we used in MOS Study 2.
-    </p>
-
-    <div>
-      <h2> Lower weights will decrease the style effects </h2>
-      <table border = "1" class="inlineTable">
-        <col width="300">
-        <col width="300">
-        <col width="300">
-
-        <tr>
-           <th>Weight </th>
-           <th>Weight 1 </th>
-           <th>Weight 0.8</th>
-           <th>Weight 0.6</th>
-        </tr>
-
-
-        <tr>
-             <th>Soft</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Soft/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Soft/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Soft/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Fast</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Fast/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Fast/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Fast/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Neutral</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Neutral/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Neutral/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Neutral/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Happy</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Happy/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Happy/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Happy/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Sad</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Sad/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Sad/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Sad/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>Angry</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Angry/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Angry/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=RenderingLevel/Angry/2.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-
-      </table>
-    </div>
-
-    <h1> Input queries and TTS responses</h1>
-    <h1> Section C </h1>
-    <p><a id='MOS2'></a></p>
-    <p> We present samples that we used in MOS Study 1.
-    </p>
-
-    <div>
-      <h2> Collected input queries from multiple speakers  </h2>
-      <table border = "1" class="inlineTable">
-        <col width="300">
-        <col width="300">
-
-        <tr>
-           <th></th>
-           <th>Input queries</th>
-           <th>TTS responses</th>
-        </tr>
-
-
-        <tr>
-             <th>1A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>1B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>1C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-       <tr>
-             <th>4A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>4B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>4C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-      </table>
-    </div>        
+  <div>
+    <h2> Comparing different models with HuBERT self-supervised features </h2>
+    <table border="1" class="inlineTable">
       
-    <h1> Input queries and TTS responses</h1>
-    <h1> Section D </h1>
-    <p><a id='MOS4'></a></p>
-    <p> We present samples that we used in MOS Study 4.
-    </p>
+            <tr>
+                <th width="200">hubert-club</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
 
-    <div>
-      <h2> Collected input queries from multiple speakers  </h2>
-      <table border = "1" class="inlineTable">
-        <col width="300">
-        <col width="300">
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
 
-        <tr>
-           <th></th>
-           <th>Input queries</th>
-           <th>TTS responses</th>
-        </tr>
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
 
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
 
-        <tr>
-             <th>1A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>1B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>1C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/1C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>2C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/2C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>3C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/3C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-       <tr>
-             <th>4A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>4B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>4C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/4C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5A</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5A/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5A/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5B</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5B/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5B/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-        <tr>
-             <th>5C</th>
-            <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5C/0.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-             <td>
-               <audio controls style="width: 200px;">
-                 <source src=Matching/5C/1.wav type="audio/wav">
-                 Your browser does not support the audio element.
-               </audio>
-             </td>
-        </tr>
-      </table>
-    </div>        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
 
-   </body>
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-club/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-sing-f0-embed</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-sing-f0-embed/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-pbtc</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/hubert-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">ground-truth</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS1/ground-truth/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+    </table>
+  </div>
+
+  <div>
+  </div>
+  <!---    <h1>Samples for six styles</h1> -->
+  <h1> Section B </h1>
+  <p><a id='MOS2'></a></p>
+  <p> 
+        Samples from MOS Study 2.  Raters were asked to judge the speaker/singer
+        similarity between the synthesized audio and the reference audio.
+    
+  </p>
+
+  <div>
+    <h2> Target singer/speaker similarity with HuBERT self-supervised features </h2>
+    <table border="1" class="inlineTable">
+      
+            <tr>
+                <th width="200">hubert-club</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-club/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/hubert-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">reference</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/monologue_a0048.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_06880.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_a_08925.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_a_05118.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_06698.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/monologue_a0052.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_09581.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/monologue_a0072.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_09219.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_a_08764.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/monologue_a0065.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_04955.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_06645.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_a_09093.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_06903.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS3/reference/base_c_11350.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+    </table>
+  </div>
+
+  <div>
+  </div>
+  <!---    <h1>Samples for six styles</h1> -->
+  <h1> Section C </h1>
+  <p><a id='MOS3'></a></p>
+  <p> 
+        Samples from MOS Study 3.  Raters were asked the judge the audio quality
+        across different models.  Each varies the self-supervised
+        feature (HuBERT vsv Wav2Vec2.0 vs. Wav3Vec2.0-ASR), and also varies the 
+        f0 feature encoder (e.g., PBTC vs. Q-LUT).
+    
+  </p>
+
+  <div>
+    <h2> Comparing different models by varying self-supervised and f0 features </h2>
+    <table border="1" class="inlineTable">
+      
+            <tr>
+                <th width="200">w2v2-asr-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-asr-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/w2v2-asr-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/hubert-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">ground-truth</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS2/ground-truth/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+    </table>
+  </div>
+
+  <div>
+  </div>
+  <!---    <h1>Samples for six styles</h1> -->
+  <h1> Section D </h1>
+  <p><a id='MOS4'></a></p>
+  <p> 
+        Samples from MOS Study 4.  Raters were asked to judge the speaker/singer
+        similarity between the synthesized audio and the reference audio with 
+        and without f0 shifting during inference.
+    
+  </p>
+
+  <div>
+    <h2> Comparing Different Models with HuBERT Self-supervised Features </h2>
+    <table border="1" class="inlineTable">
+      
+            <tr>
+                <th width="200">w2v2-asr-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">w2v2-asr-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/w2v2-asr-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-f0-embed-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-f0-embed-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">hubert-pbtc-f0-shift</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/03_00017000_00034200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/04_00058000_00074500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/06_00096000_00112500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/07_00045500_00062000.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/11_00099000_00115500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/12_00002700_00019200.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/15_00018000_00034500.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/15_00086100_00102700.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/18_00003400_00019900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/18_00043200_00059900.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/18_00181300_00197800.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/20_00049900_00066400.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/F08023019.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/M04025017.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/en027b_00065200_00076930.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/hubert-pbtc-f0-shift/en032b_00048800_00060260.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+            <tr>
+                <th width="200">reference</th>
+        
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/monologue_a0048.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_06880.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_a_08925.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_a_05118.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_06698.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/monologue_a0052.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_09581.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/monologue_a0072.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_09219.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_a_08764.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/monologue_a0065.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_04955.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_06645.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_a_09093.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_06903.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+        <td>
+          <audio controls style="width: 200px;">
+            <source src=MOS4/reference/base_c_11350.mastered.wav type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </td>
+
+            </tr>
+        
+    </table>
+  </div>
+
+    </table>
+  </div>
+
+</body>
+
 </html>
