@@ -1,1 +1,590 @@
-<h1>Self-supervised Representations for Singing Voice Conversion</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <title align="center">Audio samples for  "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</title>
+      <style type="text/css">
+        body, input, select, td, li, div, textarea, p {
+        	font-size: 11px;
+        	line-height: 16px;
+        	font-family: verdana, arial, sans-serif;
+        }
+
+        body {
+        	margin:5px;
+        	background-color:white;
+        }
+
+        h1 {
+        	font-size:16px;
+        	font-weight:bold;
+        }
+
+        h2 {
+        	font-size:14px;
+        	font-weight:bold;
+        }
+      </style>
+   </head>
+   <body>
+      <article>
+         <header>
+            <h1>Audio samples for  "SELF-SUPERVISED REPRESENTATIONS FOR SINGING VOICE SYNTHESIS"</h1>
+         </header>
+      </article>
+     
+<!--       <div>
+      PAPER accepted by INTERSPEECH 2020: <a href = https://arxiv.org/abs/2002.06758 >pdf</a>
+      </div> -->
+      
+<!--       <div>
+      Website license info sheet <a href = https://yolanda-gao.github.io/Interactive-Style-TTS/Interactive_TTS_license.pdf >pdf</a>
+      </div> -->
+
+
+      <div>
+        <h2>Abstract</h2>
+        <p>A singing voice conversion model converts a song in the voice of
+an arbitrary source singer to the voice of a target singer. Recently,
+methods that leverage self-supervised audio representations such
+as HuBERT and Wav2Vec 2.0 have helped further the state-of-
+the-art. Though these methods produce more natural and melodic
+singing outputs, they often rely on confusion and disentangle-
+ment losses to render the self-supervised representations speaker
+and pitch-invariant. In this paper, we circumvent disentanglement
+training and propose a new model that leverages ASR fine-tuned
+self-supervised representations as inputs to a HiFi-GAN neural
+vocoder for singing voice conversion. We experiment with differ-
+ent f0 encoding schemes and show that an f0 harmonic generation
+module that uses a parallel bank of transposed convolutions (PBTC)
+alongside ASR fine-tuned Wav2Vec 2.0 features results in the best
+singing voice conversion quality. Additionally, the model is capable
+of making a spoken voice sing. We also show that a simple f0
+shifting scheme during inference helps retain singer identity and
+bolsters the performance of our singing voice conversion model.
+Our results are backed up by extensive MOS studies that compare
+different ablations and baselines.</p>
+      </div>
+
+      <h2> Contents </h2>
+      <div id="toc_container">
+         <ul>
+            <b> <a href="#Style">A: Style TTS samples</a> </b><br/>
+            <b> <a href="#RenderingLevel">B: Controllable styles </a> </b><br/>
+            <b> <a href="#Matching">C: Real-life input queries and responses</a> </b><br/>
+         </ul>
+      </div>
+
+<!---    <h1>Samples for six styles</h1> -->
+    <h1> Section A </h1>
+    <p><a id='Style'></a></p>
+    <p> We present the style rendering samples for six styles.
+    </p>
+
+    <div>
+      <h2> Styles </h2>
+      <table border = "1" class="inlineTable">
+        <col width="300">
+        <col width="300">
+
+        <tr>
+           <th></th>
+           <th>A</th>
+           <th>B</th>
+        </tr>
+        <tr>
+            <th>Soft</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Soft/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Soft/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+            <th>Fast</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Fast/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Fast/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+            <th>Neutral</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Neutral/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Neutral/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Happy</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Happy/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Happy/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Sad</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Sad/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Sad/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Angry</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Angry/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Style/Angry/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+    </table>
+    </div>
+
+    <div>
+    </div>
+
+<!---    <h1>Weights effects on style rendering</h1> -->
+    <h1> Section B </h1>
+    <p><a id='RenderingLevel'></a></p>
+    <p> We present the weights impact on style rendering samples for six styles.
+    </p>
+
+    <div>
+      <h2> Lower weights will decrease the style effects </h2>
+      <table border = "1" class="inlineTable">
+        <col width="300">
+        <col width="300">
+        <col width="300">
+
+        <tr>
+           <th>Weight </th>
+           <th>Weight 1 </th>
+           <th>Weight 0.8</th>
+           <th>Weight 0.6</th>
+        </tr>
+
+
+        <tr>
+             <th>Soft</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Soft/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Soft/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Soft/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Fast</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Fast/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Fast/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Fast/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Neutral</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Neutral/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Neutral/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Neutral/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Happy</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Happy/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Happy/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Happy/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Sad</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Sad/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Sad/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Sad/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>Angry</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Angry/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Angry/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=RenderingLevel/Angry/2.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <h1> Input queries and TTS responses</h1>
+    <h1> Section C </h1>
+    <p><a id='Matching'></a></p>
+    <p> We present the recorded input queries and the style TTS' responses accordingly.
+    </p>
+
+    <div>
+      <h2> Collected input queries from multiple speakers  </h2>
+      <table border = "1" class="inlineTable">
+        <col width="300">
+        <col width="300">
+
+        <tr>
+           <th></th>
+           <th>Input queries</th>
+           <th>TTS responses</th>
+        </tr>
+
+
+        <tr>
+             <th>1A</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1A/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1A/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>1B</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1B/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1B/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>1C</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1C/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/1C/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>2A</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2A/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2A/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>2B</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2B/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2B/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>2C</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2C/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/2C/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>3A</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3A/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3A/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>3B</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3B/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3B/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>3C</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3C/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/3C/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+       <tr>
+             <th>4A</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4A/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4A/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>4B</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4B/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4B/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>4C</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4C/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/4C/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>5A</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5A/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5A/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>5B</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5B/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5B/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+        <tr>
+             <th>5C</th>
+            <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5C/0.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+             <td>
+               <audio controls style="width: 200px;">
+                 <source src=Matching/5C/1.wav type="audio/wav">
+                 Your browser does not support the audio element.
+               </audio>
+             </td>
+        </tr>
+      </table>
+    </div>        
+
+   </body>
+</html>
